@@ -1,6 +1,7 @@
 body{
 	background: url("../img/bg.png") repeat;
 	font-family: 'Open Sans', sans-serif;
+	z-index: -10;
 }
 
 h1{
@@ -12,9 +13,14 @@ h1{
 }
 
 h2{
+	text-align: center;
 	font-family: 'Raleway', sans-serif;
+	background: #2e2e2e;
+	width: 100%;
+	padding: 10px 0;
 	color: #8cc864;
-	font-size: 1.6em
+	font-size: 1.6em;
+	z-index: 0;
 }
 
 nav {	
@@ -25,6 +31,7 @@ nav {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	z-index: 1;
 }
 
 nav ul{
@@ -37,7 +44,6 @@ nav ul{
 
 nav li{
 	text-align: right;
-	height: 22%;
 	padding: 0;
 }
 
@@ -46,19 +52,17 @@ nav li > a{
 	color: #dcdcdc;
 	height: 100%;
 	width: 90px;
-	padding: 0 20px 0 0;
+	padding: 9% 20px 9% 0;
 	float: right;
 	text-decoration: none;
 }
 
 nav a:hover {
 	color: #8cc864;
-	background: transparent;s
+	background: url("../img/linen.png") repeat;
+	z-index: 1;
 }
 
-nav a:active{
-	background: transparent;
-}
 nav img{
 
 	width: 90%;
@@ -109,6 +113,7 @@ a.lightbox img {
 	-moz-transition: .5s ease-in-out;
 	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
+	z-index: 10;
 }
 
 /* Styles the close link, adds the slide down transition */
@@ -183,6 +188,7 @@ a.lightbox-close:after {
 .lightbox-target:target img {
 	max-height: 80%;
 	max-width: 80%;
+	z-index: 10;
 }
 
 .lightbox-target:target a.lightbox-close {
@@ -191,9 +197,25 @@ a.lightbox-close:after {
 
 /* End code block from Design Souch */
 
+
+/* Was an attempt to create slide transitions between anchors for galleries, but further
+digging shows I'd either have to use a radio-button hack (would break with the light box close)
+or bring in JS/Jquery, which isn't allowed */
+
 .container a{
 	-webkit-transition: .5s ease-in-out;
 	-moz-transition: .5s ease-in-out;
 	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
+}
+
+/* responsive design */
+
+@media all and (max-width: 700px){
+a.lightbox img {
+	width: 80%;
+	height: auto;
+	box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+	margin: 10px 0;
+}
 }
