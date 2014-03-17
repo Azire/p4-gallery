@@ -31,7 +31,7 @@ nav {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	z-index: 1;
+	z-index: 10;
 }
 
 nav ul{
@@ -212,10 +212,31 @@ or bring in JS/Jquery, which isn't allowed */
 /* responsive design */
 
 @media all and (max-width: 700px){
-a.lightbox img {
-	width: 80%;
-	height: auto;
-	box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-	margin: 10px 0;
+
+	.container {
+		width: 70%;
+	}
+
+	a.lightbox img {
+		width: 100%;
+		height: auto;
+		box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+		margin: 10px auto;
+	}
 }
+
+@media all and  (max-width: 500px){
+
+	nav {
+		position: fixed;
+		left: -80px;
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		-o-transition: .5s ease-in-out;
+		transition: .5s ease-in-out;
+	}
+
+	nav:hover{
+		left: 0px;
+	}
 }
