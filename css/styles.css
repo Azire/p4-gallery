@@ -1,7 +1,6 @@
 body{
 	background: url("../img/bg.png") repeat;
 	font-family: 'Open Sans', sans-serif;
-	z-index: -10;
 }
 
 h1{
@@ -60,7 +59,7 @@ nav li > a{
 nav a:hover {
 	color: #8cc864;
 	background: url("../img/linen.png") repeat;
-	z-index: 1;
+	z-index: 10;
 }
 
 nav img{
@@ -71,6 +70,9 @@ nav img{
 }
 /* Gallery CSS taken from Design Couch - http://www.designcouch.com/home/why/2013/11/01/responsive-css3-lightbox-with-no-javascript/ */
 
+a{
+	text-decoration: none;
+}
 /* Styles the thumbnail */
 
 a.lightbox img {

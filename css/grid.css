@@ -48,10 +48,3 @@
 
 
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
-
-@media all and (max-width: 700px){
-
-	.container {
-		width: 70%;
-	}
-	}
